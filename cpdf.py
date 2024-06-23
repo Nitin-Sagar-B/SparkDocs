@@ -119,7 +119,7 @@ if not st.session_state.authenticated:
         else:
             st.error("Authentication failed. Please enter a valid passkey. 🛑")
     
-    st.image("E:\\projects-ideas-codes\\PROJECTS\\odic\\cool logo.png", width=600, caption="Developed by Sparky Labs")
+    st.image("cool logo.png", width=600, caption="Developed by Sparky Labs")
 
 else:
     # Input for API key
