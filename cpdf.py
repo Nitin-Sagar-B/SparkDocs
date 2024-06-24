@@ -64,7 +64,7 @@ def ask_question(question, text_chunks, google_api_key):
     
     # Prepare prompts and get responses
     prompt_template = (
-        "system: You are an outstanding AI tutor known for your expertise and clarity. Your role is to assist students by providing clear, concise, and comprehensive answers to their assignment questions using the provided content from the PDF. Use your extensive knowledge only if necessary.\n"
+        "system: You are an outstanding AI tutor known for your expertise and clarity. Your role is to assist students by providing clear, concise, and comprehensive answers to their assignment questions using the provided content from the uploaded document. Use your extensive knowledge only if necessary.\n"
         "user: Context: {context}\n\n"
         "Question: {question}\n\n"
         "assistant: \n"
@@ -72,12 +72,13 @@ def ask_question(question, text_chunks, google_api_key):
         "- Well-structured\n"
         "- Very detailed\n"
         "- Comprehensive for the topic\n"
+        "- contain short and easy code snippets if needed in context to the topic of the document"
         "- Include relevant examples\n"
         "- Include relevant mathematical content and algorithms, mandatorily\n"
         "- Free of repetitive content and unnecessary length\n"
         "- Appropriate for an undergrad engineering AI and Data Science student\n"
         "Begin the answer by writing the question and then the answer"
-        "Provide a clear and elaborative answer based on the PDF context"
+        "Provide a clear, concise and comprehensive answer based on the PDF context"
     )
     
     full_response = []
