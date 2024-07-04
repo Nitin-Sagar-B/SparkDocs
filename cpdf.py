@@ -95,7 +95,7 @@ def ask_question(question, text_chunks, google_api_key):
     
     return ''.join(full_response)
 
-st.set_page_config(layout="wide", page_title="SparkPDF", page_icon=":robot_face:")  # Set app to wide mode and customize title and icon
+st.set_page_config(layout="wide", page_title="SparkDocs", page_icon=":robot_face:")  # Set app to wide mode and customize title and icon
 
 # Load custom CSS for styling
 with open("style.css") as css:
@@ -106,7 +106,7 @@ if 'authenticated' not in st.session_state:
     st.session_state.authenticated = False
 
 if not st.session_state.authenticated:
-    st.title("Welcome to SparkPDF")
+    st.title("Welcome to SparkDocs")
 
     # Add an input field for the user to enter the passkey
     passkey = st.text_input("🚀 Ready to dive into document analysis? Authenticate with the passkey (hint: it's definitely not 'password123' 😜)", type="password")
