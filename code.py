@@ -116,7 +116,7 @@ if not st.session_state.authenticated:
         if passkey == correct_passkey:
             st.session_state.authenticated = True
             st.success("Authentication successful! Welcome aboard! 🎉")
-            st.experimental_rerun()  # Refresh the app to show the main content
+            st.rerun()  # Refresh the app to show the main content
         else:
             st.error("Authentication failed. Please enter a valid passkey. 🛑")
     
@@ -130,7 +130,7 @@ else:
         st.warning("Please enter your API key to continue.")
     else:
         # Now you can proceed with your app content here
-        st.title("SparkPDF")
+        st.title("SparkDocs")
         st.subheader("AI-Powered Document Q&A System")
         st.write("Upload a PDF, PPTX, or DOCX file, ask questions, and get answers in context with the document content.")
 
