@@ -38,7 +38,7 @@ def read_docx(file):
     return text
 
 # Function to split text into smaller chunks
-def split_text(text, chunk_size=1000000, chunk_overlap=100):
+def split_text(text, chunk_size=10000, chunk_overlap=500):
     splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
     return splitter.split_text(text)
 
