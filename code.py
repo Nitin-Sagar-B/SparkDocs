@@ -74,7 +74,7 @@ def ask_question(question, text_chunks, google_api_key):
         "- Comprehensive for the topic\n"
         "- contain short and easy code snippets if needed in context to the topic of the document"
         "- Include relevant examples\n"
-        "- Include relevant mathematical content and algorithms, mandatorily\n"
+        "- Make sure you provide only a single well-structured answer\n"
         "- Free of any repetitive content and unnecessary length\n"
         "- Appropriate for an undergrad engineering AI and Data Science student\n"
         "Begin the answer by writing the question and then the answer"
