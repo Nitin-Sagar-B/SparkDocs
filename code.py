@@ -38,7 +38,7 @@ def read_docx(file):
     return text
 
 # Function to split text into smaller chunks
-def split_text(text, chunk_size=100000, chunk_overlap=100):
+def split_text(text, chunk_size=1000000, chunk_overlap=100):
     splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
     return splitter.split_text(text)
 
@@ -75,7 +75,7 @@ def ask_question(question, text_chunks, google_api_key):
         "- contain short and easy code snippets if needed in context to the topic of the document"
         "- Include relevant examples\n"
         "- Include relevant mathematical content and algorithms, mandatorily\n"
-        "- Free of repetitive content and unnecessary length\n"
+        "- Free of any repetitive content and unnecessary length\n"
         "- Appropriate for an undergrad engineering AI and Data Science student\n"
         "Begin the answer by writing the question and then the answer"
         "Provide a clear, concise and comprehensive answer based on the PDF context"
